@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>csv,conf 2017 – Designing Data Exploration</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Simon Jockers">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/correctiv.css" id="theme">
+
+		<!-- Load web fonts from Typekit -->
+		<script src="https://use.typekit.net/tpc1nqf.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<section data-background="assets/title.jpg">
+						<h1 class="title">
+							<span class="title-highlight">Designing Data Exploration</span>
+						</h1>
+					</section>
+
+					<section >
+						<img src="assets/intro1.jpg" class="large" />
+
+						<aside class="notes">
+							It is 1990, just a couple of weeks after the Berlin wall came down. It's an exciting time in Germany.
+						</aside>
+					</section>
+					<section >
+						<img src="assets/intro2.jpg" class="large" />
+
+						<aside class="notes">
+							The wall is gone. Yet, the people of Eastern Germany still live in the GDR, behind the iron curtain. But they are no longer afraid of the oppressive Eastern German state and its infamous Secret Police, the Stasi.
+						</aside>
+					</section>
+
+					<section >
+						<img src="assets/stasispy.jpg" class="large" />
+
+						<aside class="notes">
+							Some context: In 1989 the Stasi had 280.000 employees, official ones but also unofficial ones, spying on their own citizens and fighting the Eastern German opposition in secret.
+						</aside>
+					</section>
+
+					<section >
+						<img src="assets/intro3.jpg" class="large" />
+
+						<aside class="notes">
+							But now it becomes clear that the days of the Stasi are over. As the Stasi starts to secretly destroy their data, protesters occupy the Stasi headquarters.
+						</aside>
+					</section>
+
+					<section >
+						<img src="assets/intro5.jpg" class="large" />
+						<aside class="notes">
+							Eventually, citizen committees are formed to watch over the termination of the Stasi. And there is a huge public discussion on what to do with the Stasis heritage – both in terms of data and physical properties.
+						</aside>
+					</section>
+
+					<section >
+						<img src="assets/david.jpg" />
+
+						<aside class="notes">
+							<p>Meet my colleague David Crawford, now a senior reporter at CORRECTIV. He is also a hoarder of government documents. In the picture, he is posing with a massive trove of secret service files. This is exactly his thing.</p>
+
+							<p>In 1990, David was a freelance journalist specializing in what people back then called computer assisted reporting.</p>
+						</aside>
+					</section>
+
+					<section >
+						<img src="assets/stasi-office.jpg" />
+
+						<aside class="notes">
+							<p>In the chaos of Eastern Berlin of 1990, David gets hold of a data set containing listings of several thousand Stasi properties all across the country. Offices, apartments, but also sports facilities, hotels, restaurants, even a camp site – all used by the Stasi, sometimes openly, but mostly in secret.</p>
+
+							<p>David realizes how important this information for the citizens of the GDR, and he decides to get this published. Not just the story, but the whole dataset.</p>
+						</aside>
+					</section>
+
+					<section data-background="assets/liste.jpg">
+
+						<aside class="notes">
+							<p>He gets Western German newspaper Taz to publish a special issue consisting mainly of long lists of properties, sorted by city and post codes, so that people can find the former Stasi properties in their neighborhood.</p>
+
+							<p>Reason: Taz is the only western German newspaper that is broadly available on Eastern German newsstands.</p>
+						</aside>
+					</section>
+
+					<section data-background="assets/liste2.jpg">
+
+						<aside class="notes">
+							<p>The issue is such a success that, after it sells out on newsstands, taz makes it available via mail-order. Today, a copy can be found in the German national archive and, if you ever come to Berlin, you can see another copy in the Stasi museum.</p>
+						</aside>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section >
+						<img src="assets/david.jpg" />
+
+						<aside class="notes">
+							Like my co-worker David, many Journalists, scientists, public authorities are literally sitting on large data sets. This is what we work with.
+						</aside>
+					</section>
+
+					<section >
+						(Screenshot tableau / R Studio)
+
+						<aside class="notes">
+							When we analyze data using tools like Jupiter Notebooks, R, Tableau, or Excel, we explore it using [formalized statistical methods?] or just by browsing and looking at it from different angles.
+						</aside>
+					</section>
+
+					<section >
+						(Screenshot news article with graphics)
+
+						<aside class="notes">
+							The final graphics or charts that we eventually publish as parts of news pieces or reports are high level summaries of the data we work with. They are the result of analysis, not the actual data itself. Very often this makes sense. After all, it is your job to analyze the data, identify the relevant aspects, and find the ways to show them. You decide what’s interesting or relevant and prepare it for your audience.
+						</aside>
+					</section>
+
+					<section >
+						(Screenshot care homes)
+
+						<aside class="notes">
+							But sometimes, its the individual data points that are interesting for your audience, not just the big picture.
+
+							This is a screenshot of a project I worked on last year. It makes data from the inspection reports of 13,000 care homes in Germany available to the public. It is what we call a news app or a data explorer.
+
+							Obviously, the web is a much better tool for publishing large data sets than a newspaper.
+
+							<ul>
+								<li>Provide tools for searching, querying, browsing</li>
+								<li>The web has no character limit, you can publish all the data + all the information you need to explain the data and put individual data points into context</li>
+						</aside>
+					</section>
+
+					<section>
+						(Screenshot ICIJ data explorer)
+
+						<aside class="notes">
+							Here you see the ICIJ offshore leaks database. It makes data [what exactly] from the panama papers leak and other ICIJ investigations accessible to the public.
+
+							This is an example of another reason to make the data you are sitting on publicly accessible. By doing so, you enable others to build upon your work.
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h1 class="title">
+						<span class="title-highlight">Tools <br/>not graphics</span>
+					</h1>
+
+					<aside class="notes">
+						<ul>
+							<li>Complexity of interacting with data moved to the user</li>
+							<li>We build tools, but not generic one like R-Studio or Excel</li>
+							<li>Domain-specific data visualization tools</li>
+							<li>specific to a single data set</li>
+							<li>constraints: while you want to give access to all the data, you also don’t want your users to get lost. You have to guide users to find relevant or interesting information in the data. You have to make some decisions for your users.</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h1 class="title">
+						<span class="title-highlight">What?</span>
+					</h1>
+					<ul>
+						<li>Tables</li>
+						<li>Graphs</li>
+						<li>Documents or text corpora</li>
+						<li>etc.</li>
+					</ul>
+					<aside class="notes">
+						This is probably the most obvious one. Mostly a technical thing: How is the data structured, what does it represent, etc.
+					</aside>
+				</section>
+
+				<section data-background="assets/mugshot.jpg">
+					<h1 class="title">
+						<span class="title-highlight">Should this really be public?</span>
+					</h1>
+
+					<aside class="notes">
+						<ul>
+							<li>Does this infringe on someones privacy? [ethics / privacy]</li>
+							<li>Is there public interest in this?</li>
+							<li>Anonymizing data: Redacting names is often not enough</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h1 class="title">
+						<span class="title-highlight">Who?</span>
+					</h1>
+
+					<h2>Target group</h2>
+					<ul>
+						<li>goals/interest</li>
+						<li>media consumption habits</li>
+						<li>data literacy</li>
+					</ul>
+
+					<aside class="notes">
+						- The Public is not a target group
+					</aside>
+				</section>
+
+				<section style="background-size: contain" data-background="assets/mobile.jpg">
+					<aside class="notes">
+						What is the setting this tool will be used in: Mobile (quick, low attention), desktop (purposeful?, high attention), museum (immersive) (also: How much time will they spend, how much attention will your data viz get)
+					</aside>
+				</section>
+
+				<section>
+					<h1 class="title">
+						<span class="title-highlight">How?</span>
+					</h1>
+
+					<h3>Macro: Far views</h3>
+
+					<ul>
+						<li>The big picture</li>
+						<li>High-level overviews</li>
+					</ul>
+
+					<h3>Micro: Near views</h3>
+
+					<ul>
+						<li>Individual data points</li>
+						<li>Anecdotes or stories</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>[Multiple steps between micro and macro views]</h1>
+
+					<aside class="notes">
+						Point people to interesting aspects of the data
+					</aside>
+				</section>
+
+				<section>
+					<h1>[Add context and explain]</h1>
+				</section>
+
+				<section>
+					<h1>Let people find themselves in the data</h1>
+				</section>
+
+				<section>
+					<h1>Integrate data exploration into a narrative</h1>
+				</section>
+
+				<section>
+					<h1>Use time to build suspense</h1>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>Diskussion</h1>
+					<p>
+						<a href="https://twitter.com/sjockers">@sjockers</a><br>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1280,
+				height: 960,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
