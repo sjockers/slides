@@ -125,7 +125,7 @@
 						</aside>
 					</section>
 
-					<section data-background="assets/liste2.jpg">
+					<section data-background="assets/liste2.png">
 
 						<aside class="notes">
 							<p>The issue is such a success that, after it sells out on newsstands, taz makes it available via mail-order. Today, a copy can be found in the German national archive and, if you ever come to Berlin, you can see another copy in the Stasi museum.</p>
@@ -150,7 +150,7 @@
 						</h1>
 
 						<aside class="notes">
-							When we analyze data using tools like Jupiter Notebooks, R, Tableau, or Excel, we usually start with exploring it. Either with formalized statistical methods or just by browsing and looking at it from different angles.
+							When we analyze data using tools like Jupyter Notebooks, R, Tableau, or Excel, we usually start by exploring it. Either with formalized statistical methods or just by browsing and looking at it from different angles.
 						</aside>
 					</section>
 
@@ -168,7 +168,7 @@
 						<img src="assets/nursinghomes.png" class="large" />
 
 						<aside class="notes">
-							<p>But sometimes, its the individual data points that are interesting for your audience, not just the big picture.</p>
+							<p>But sometimes, it is the individual data points that are interesting for your audience, not just the big picture.</p>
 
 							<p>This is a screenshot of a project I worked on last year. We call this a news app or a data explorer. This news app makes data from the inspection reports of 13,000 care homes in Germany available to the public. It is a companion app to our reporting on issues in the care sector.</p>
 
@@ -241,8 +241,9 @@
 						<p>Another aspect to what: Ethics</p>
 						<ul>
 							<li>Is there public interest in this?</li>
-							<li>Does this infringe on someones privacy?</li>
-							<li>Anonymizing data: Redacting names is often not enough</li>
+							<li>Does this contain personal and/or otherwise sensitive data?</li>
+							<li>Carefully evaluate how to deal with it.</li>
+							<li>Anonymize data, inform affected parties, ask them for comment</li>
 						</ul>
 					</aside>
 				</section>
@@ -253,9 +254,9 @@
 					</h1>
 
 					<ul>
-						<li>goals/interest in the topic</li>
-						<li>data literacy</li>
-						<li>media consumption habits</li>
+						<li>Goals (interest in the topic)</li>
+						<li>Data literacy</li>
+						<li>Media consumption habits</li>
 					</ul>
 
 					<aside class="notes">
@@ -280,14 +281,14 @@
 						<span class="title-highlight">How?</span>
 					</h1>
 
-					<h3>Macro: Far view</h3>
+					<h3>Macro: far view</h3>
 
 					<ul>
 						<li>The big picture</li>
 						<li>High-level overviews</li>
 					</ul>
 
-					<h3>Micro: Near view</h3>
+					<h3>Micro: near view</h3>
 
 					<ul>
 						<li>Individual data points</li>
@@ -295,50 +296,81 @@
 					</ul>
 
 					<aside class="notes">
-						<p>A traditional approach storytelling in data journalism is to look at the big picture, use some numbers from this in your reporting, and then look for an anecdote or two to tell a story.</p>
+						<p>A traditional approach storytelling in data journalism is to look at the big picture, use some numbers from this in your reporting, and then look for an anecdote or two to tell an actual story.</p>
 						<hr />
 						<p>Scott Klein: <a href="https://github.com/propublica/guides">Propublica Guide</a> to the Design and Structure of a News Application</p>
 					</aside>
 				</section>
 
-				<section>
-					<img src="assets/offshore2.png" class="large" />
-
+				<section data-background="assets/offshore2.png">
+					<h1 class="title">
+						<span class="title-highlight">Macro</span>
+					</h1>
 					<aside class="notes">
-						<p>Again: The search result page from the ICIJ offshore leaks databease</p>
-						<p>Multiple steps between micro and macro views to provide different access points to the data</p>
+						<p>Again: The search page from the ICIJ offshore leaks database</p>
+						<p>Effective for searching and browsing</p>
+						<p>Easy to get lost</p>
+						<p>Most probably targeted at other journalists or researchers</p>
 					</aside>
 				</section>
 
 				<section>
 					<img src="assets/offshore3.png" class="large" />
-
 					<aside class="notes">
-						<p>Multiple steps between micro and macro views</p>
-						<p>Point people to interesting aspects.</p>
+						<p>Macro views are great for pointing people to interesting aspects.</p>
+						<p>Alternative macro view that hilights important people that can be found in the data data.</p>
+					</aside>
+				</section>
+
+				<section data-background="assets/offshore1.png">
+					<h1 class="title">
+						<span class="title-highlight">Micro</span>
+					</h1>
+					<aside class="notes">
+						<p>Again: A detail page from the ICIJ offshore leaks database</p>
+						<p>All the data they have for a specific item, but very little to relate to</p>
+						<p>Most probably targeted at other journalists or researchers</p>
+						<p>If you are just browsing, this is not interesting at all</p>
 					</aside>
 				</section>
 
 				<section>
 					<img src="assets/offshore4.png" class="large" />
-
 					<aside class="notes">
-						Add context and explain. This is how you can help people understand and in a way, find stories in the data.
+						<p>Adds context and explains background.</p>
+						<p>Actually telling a story</p>
+						<p>Individual illustration makes it more relateable and interesting for people browsing.</p>
+					</aside>
+				</section>
+
+				<section data-background="assets/vitalsigns.png">
+					<h1 class="title">
+						<span class="title-highlight">Personalization</span>
+					</h1>
+					<aside class="notes">
+						<p>Let people find themselves in the data</p>
+						<p>Vital Signs: All the data about how healthcare is being practiced in the US.</p>
+						<p>Find your their own doctor in the data set</p>
 					</aside>
 				</section>
 
 				<section>
-					<img src="assets/vitalsigns.png" class="large" />
-
+					<img src="assets/microbreweries.png" class="large" />
 					<aside class="notes">
-						Let people find themselves in the data. Vital Signs: All the data about how healthcare is being practiced. Find your own doctor.
+						<p>Use IP geolocation to personalize.</p>
+						<p>Here, used as a clever effect to draw people in.</p>
+						<p>Depending on data, this could be used for much more than this.</p>
 					</aside>
 				</section>
 
 				<section data-background-video="assets/polygraph.mp4" data-background-video-loop data-background-video-muted>
-
+					<h1 class="title">
+						<span class="title-highlight">Embedding</span>
+					</h1>
 					<aside class="notes">
-						Integrate data exploration into a narrative
+						<p>Integrate data exploration into a narrative.</p>
+						<p>Lead the audience through a series of macro and micro views.</p>
+						<p>Providing the option to drill down on details.</p>
 					</aside>
 				</section>
 
@@ -347,8 +379,8 @@
 						<span class="title-highlight">Discuss!</span>
 					</h1>
 					<p>
-						<a href="https://twitter.com/sjockers">@sjockers</a><br>
-						<a href="https://sjockers.github.io/slides/csvconf17">sjockers.github.io/slides/csvconf17</a>
+						<a href="https://sjockers.github.io/slides/csvconf17">sjockers.github.io/slides/csvconf17</a><br>
+						<a href="https://twitter.com/sjockers">@sjockers</a>
 					</p>
 				</section>
 
