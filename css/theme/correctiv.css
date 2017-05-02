@@ -316,6 +316,13 @@ body {
   text-shadow: 1px 1px 20px black;
 }
 
+.reveal a.credits {
+  background: rgba(0, 0, 0, 0.8);
+  padding: .3em;
+  color: white;
+  position: absolute;
+  bottom: 1em;
+}
 
 /*********************************************
  * TITLE
