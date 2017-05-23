@@ -115,6 +115,10 @@ body {
   margin: 0 0 1em 1em;
 }
 
+.reveal li {
+  min-width: 12em;
+}
+
 .reveal ol {
   list-style-type: decimal;
 }
