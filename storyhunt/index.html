@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Telling stories with data / Simon Jockers</title>
+
+		<meta name="description" content="The why and how of publishing large data sets on the Web">
+		<meta name="author" content="Simon Jockers">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/correctiv.css" id="theme">
+
+		<!-- Load web fonts from Typekit -->
+		<script src="https://use.typekit.net/tpc1nqf.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<section data-background="assets/storyhunt-background.jpg">
+						<h1 class="title">
+							<span class="title-highlight">
+								Telling stories <br/>
+								with data
+							</span>
+						</h1>
+						<a class="credits" href="https://sjockers.github.io/slides/storyhunt">sjockers.github.io/slides/storyhunt</a>
+					</section>
+
+					<section>
+						<img src="assets/correctiv.png" class="large" />
+
+						<aside class="notes">
+						 CORRECTIV, investigative journalism non-profit from Germany. We do public interest journalism often based on data.
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/intro1.jpg" class="large" />
+
+						<aside class="notes">
+							It is 1990, just a couple of weeks after the Berlin wall came down.
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/intro2.jpg" class="large" />
+
+						<aside class="notes">
+							The wall is gone. Yet, the people of Eastern Germany still live in the GDR, behind the iron curtain. But they are no longer afraid of the oppressive Eastern German state and its infamous Secret Police, the Stasi.
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/spy.jpg" class="large" />
+
+						<aside class="notes">
+							Some context: The Stasi was a massive spying operation mostly targetting the citizens of Germany. The Stasi had 280.000 employees, official ones but also unofficial ones, spying on citizens and fighting the Eastern German opposition in secret.
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/intro3.jpg" class="large" />
+
+						<aside class="notes">
+							But in 1990 it becomes clear that the days of the Stasi are over. As the Stasi starts to secretly destroy their data, protesters occupy the Stasi headquarters.
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/title.jpg" class="large" />
+						<aside class="notes">
+							Eventually, citizen committees are formed to watch over the termination of the Stasi. And there is a huge public discussion on what to do with the Stasis heritage – both in terms of data and physical property.
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/david.jpg" />
+
+						<aside class="notes">
+							<p>Meet my colleague David Crawford, now a senior reporter at CORRECTIV. David is also a hoarder of government documents. In the picture, he is posing with a massive trove of secret service files. This is his thing.</p>
+
+							<p>In 1990, way before CORRECTIV existed, David was a freelance journalist specializing in what people call computer assisted reporting.</p>
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/stasi-office.jpg" class="large" />
+
+						<aside class="notes">
+							<p>In the chaos of Eastern Berlin of 1990, David gets hold of a data set containing listings of several thousand Stasi properties all across the country. Offices, apartments, but also sports facilities, hotels, restaurants, even a camp site – all used by the Stasi, sometimes openly, but mostly in secret.</p>
+
+							<p>David realizes how important this information for the citizens of Eastern Germany, and he decides to get this published. Not just the story, but the whole dataset.</p>
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/liste.jpg" class="large" />
+
+						<aside class="notes">
+							<p>He gets Western German newspaper Taz to publish a special issue consisting mainly of long lists of properties, sorted by city and post codes, so that people can find the former Stasi properties in their neighborhood.</p>
+						</aside>
+					</section>
+
+					<section data-background="assets/liste2.png">
+
+						<aside class="notes">
+							<p>The issue is such a success that, after it sells out on newsstands, taz makes it available via mail-order. Today, a copy can be found in the German national archive and you can see another copy in the Stasi museum.</p>
+						</aside>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h1 class="title">
+							<span class="title-highlight">
+								Where data<br>
+								comes from
+							</span>
+						</h1>
+
+						<ul>
+							<li>FOI requests</li>
+							<li>Open data</li>
+							<li>Leaked data</li>
+						</ul>
+
+						<ul>
+							<li>scraping</li>
+							<li>digitizing (OCR)</li>
+							<li>cleaning</li>
+						</ul>
+
+						<aside class="notes">
+
+						</aside>
+					</section>
+
+					<section data-background="assets/jupyter.png">
+						<h1 class="title">
+							<span class="title-highlight">Exploring Data</span>
+						</h1>
+
+						<aside class="notes">
+							When we analyze data using tools like Jupyter Notebooks, R, Tableau, or Excel, we usually start by exploring it. Either with formalized statistical methods or just by browsing and looking at it from different angles.
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/newsarticle.png" class="large" />
+
+						<aside class="notes">
+							<p>The final graphics or charts that we eventually publish as parts of news pieces or reports are high level summaries of the data we work with. They are the result of analysis, not the actual data itself. Very often this makes sense.</p>
+
+							<p>After all, it is your job to analyze the data, identify the relevant aspects, and find the ways to show them. You decide what’s interesting or relevant and prepare it for your audience.</p>
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/property1.png" class="large" />
+
+						<aside class="notes">
+
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/property2.png" class="large" />
+
+						<aside class="notes">
+
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/offshore2.png" class="large" />
+
+						<aside class="notes">
+							<p>ICIJ offshore leaks database. It makes data from the panama papers leak and other ICIJ investigations accessible to the public. Journalists across the world are using this to investigate money laundering and tax evasion in their respective countries.</p>
+
+							<p>This is an example of another reason to make the data you are sitting on publicly accessible. By doing so, you enable others to build upon your work.</p>
+						</aside>
+					</section>
+
+					<section>
+						<img src="assets/offshore1.png" class="large" />
+
+						<aside class="notes">
+							<p>Obviously, the web is a much better tool for publishing large data sets than a newspaper.</p>
+
+							<ul>
+								<li>The web has no character limit</li>
+								<li>you can publish all the data + explain it to and put individual data points into context</li>
+								<li>Interaction: Simple tooltip</li>
+								<li>provide tools for searching, querying, browsing</li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h1 class="title">
+						<span class="title-highlight">Tools <br/>not graphics</span>
+					</h1>
+
+					<aside class="notes">
+						<ul>
+							<li>Complexity of interacting with data moved to the audience</li>
+							<li>We build tools, but not generic ones like R-Studio or Excel</li>
+							<li>Data visualization tools that are specific to a single data set</li>
+							<li>Constraints: while you want to give access to all the data, you also don’t want your users to get lost. You have to guide users to find relevant or interesting information in the data. So you have to make some decisions for your users.</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h1 class="title">
+						<span class="title-highlight">What?</span>
+					</h1>
+					<ul>
+						<li>Tables</li>
+						<li>Graphs</li>
+						<li>Documents or text corpora</li>
+						<li>etc.</li>
+					</ul>
+					<aside class="notes">
+						This is probably the most obvious one and mostly a technical thing: How is the data structured, what does it represent.
+					</aside>
+				</section>
+
+				<section data-background="assets/mugshot.jpg">
+					<h1 class="title">
+						<span class="title-highlight">Should this really be public?</span>
+					</h1>
+
+					<aside class="notes">
+						<p>Apart from the technical viewpoint, there are also ethical aspects</p>
+						<ul>
+							<li>Is there public interest in this?</li>
+							<li>Does this contain personal and/or otherwise sensitive data?</li>
+							<li>Carefully evaluate how to deal with it.</li>
+							<li>Anonymize data, inform affected parties, ask them for comment.</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h1 class="title">
+						<span class="title-highlight">Who?</span>
+					</h1>
+
+					<ul>
+						<li>Goals (interest in the topic)</li>
+						<li>Data literacy</li>
+						<li>Media consumption habits</li>
+					</ul>
+
+					<aside class="notes">
+						In Davids case, his target group was the Public of eastern Germany. So he choose a newspaper that was widely available across the state. But most probably, The Public is not your target group.
+					</aside>
+				</section>
+
+				<section data-background="assets/environment-desk.jpg">
+					<aside class="notes">
+						<p>Related to this is also: What is the environment this tool will be used in.</p>
+
+						<p>We very often think that the articles and graphics are consumed in the same context it was made in</p>
+
+						<p>people use it more purposeful and with high attention, maybe in an office environment.</p>
+					</aside>
+				</section>
+
+				<section data-background="assets/environment-mobile.jpg">
+					<aside class="notes">
+						<ul>
+							<li>But most often it will actually be it be casual</li>
+							<li>maybe on mobile</li>
+							<li>with low attention</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h1 class="title">
+						<span class="title-highlight">How?</span>
+					</h1>
+
+					<h3>Macro: far view</h3>
+
+					<ul>
+						<li>The big picture</li>
+						<li>High-level overviews</li>
+					</ul>
+
+					<h3>Micro: near view</h3>
+
+					<ul>
+						<li>Individual data points</li>
+						<li>Anecdotes or stories</li>
+					</ul>
+
+					<aside class="notes">
+						<p>A traditional approach storytelling in data journalism is to look at the big picture, use some numbers from this in your reporting, and then look for an anecdote or two to tell an actual story.</p>
+						<hr />
+						<p>Scott Klein: <a href="https://github.com/propublica/guides">Propublica Guide</a> to the Design and Structure of a News Application</p>
+					</aside>
+				</section>
+
+				<section data-background="assets/offshore2.png">
+					<h1 class="title">
+						<span class="title-highlight">Macro</span>
+					</h1>
+					<aside class="notes">
+						<p>Again: The search page from the ICIJ offshore leaks database</p>
+						<p>Effective for searching and browsing</p>
+						<p>Easy to get lost</p>
+						<p>Most probably targeted at other journalists or researchers</p>
+					</aside>
+				</section>
+
+				<section>
+					<img src="assets/offshore3.png" class="large" />
+					<aside class="notes">
+						<p>Macro views are great for pointing people to interesting aspects.</p>
+						<p>Alternative macro view that hilights important people that can be found in the data data.</p>
+					</aside>
+				</section>
+
+				<section data-background="assets/offshore1.png">
+					<h1 class="title">
+						<span class="title-highlight">Micro</span>
+					</h1>
+					<aside class="notes">
+						<p>Again: A detail page from the ICIJ offshore leaks database</p>
+						<p>All the data they have for a specific item, but very little to relate to</p>
+						<p>Most probably targeted at other journalists or researchers</p>
+						<p>If you are just browsing, this is not interesting at all</p>
+					</aside>
+				</section>
+
+				<section>
+					<img src="assets/offshore4.png" class="large" />
+					<aside class="notes">
+						<p>Adds context and explains background.</p>
+						<p>Actually telling a story</p>
+						<p>Individual illustration makes it more relateable and interesting for people browsing.</p>
+					</aside>
+				</section>
+
+				<section data-background="assets/efa1.png">
+					<h1 class="title">
+						<span class="title-highlight">Personalization</span>
+					</h1>
+					<aside class="notes">
+						<p>Let people find their own stories in the data</p>
+						<p>Euros für Ärzte: Payments from pharma companies to doctors</p>
+						<p>Find your own doctor in the data set via name, city, or post code</p>
+					</aside>
+				</section>
+
+				<section>
+					<img src="assets/efa2.png" class="large" />
+					<aside class="notes">
+						<p>Again: Micro view – detailed data about every single entity in the data</p>
+						<p>Here: data about a single doctor – your doctor</p>
+					</aside>
+				</section>
+
+				<section>
+					<img src="assets/microbreweries.png" class="large" />
+					<aside class="notes">
+						<p>Use IP geolocation to personalize.</p>
+						<p>Here, used as a clever effect to draw people in.</p>
+						<p>Depending on data, this could be used for much more than this.</p>
+					</aside>
+				</section>
+
+				<section>
+					<h1 class="title">
+						<span class="title-highlight">Discuss!</span>
+					</h1>
+					<p>
+						<a href="https://sjockers.github.io/slides/storyhunt">sjockers.github.io/slides/storyhunt</a><br>
+						<a href="https://twitter.com/sjockers">@sjockers</a>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1280,
+				height: 960,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
